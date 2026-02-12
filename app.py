@@ -129,7 +129,7 @@ with col2:
                 font-size:16px;
                 cursor:pointer;
             ">
-                💬 WhatsApp
+                WhatsApp
             </button>
         </a>
         """,
