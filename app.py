@@ -53,6 +53,8 @@ scenario = {
 
 df, owner_final, renter_final = run_single_scenario(inputs, scenario)
 
+st.info("Opening this on your phone? Tap the ← arrows in the top-left to edit inputs.")
+
 st.subheader("Net Worth Comparison")
 col1, col2 = st.columns(2)
 
