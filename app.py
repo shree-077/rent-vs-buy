@@ -87,3 +87,51 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.write(
+        "You can reach me directly."
+)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown(
+        """
+        <a href="tel:+917559161118">
+            <button style="
+                width:100%;
+                background-color:#0f4c81;
+                color:white;
+                padding:12px;
+                border:none;
+                border-radius:6px;
+                font-size:16px;
+                cursor:pointer;
+            ">
+                📞 Call
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col2:
+    st.markdown(
+        """
+        <a href="https://wa.me/917559161118" target="_blank">
+            <button style="
+                width:100%;
+                background-color:#25D366;
+                color:white;
+                padding:12px;
+                border:none;
+                border-radius:6px;
+                font-size:16px;
+                cursor:pointer;
+            ">
+                💬 WhatsApp
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
