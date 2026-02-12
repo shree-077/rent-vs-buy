@@ -99,6 +99,7 @@ with col1:
         """
         <a href="tel:+917559161118">
             <button style="
+                width:40%;
                 background-color:#0f4c81;
                 color:white;
                 padding:12px;
@@ -119,6 +120,7 @@ with col2:
         """
         <a href="https://wa.me/917559161118" target="_blank">
             <button style="
+                width:40%;
                 background-color:#25D366;
                 color:white;
                 padding:12px;
