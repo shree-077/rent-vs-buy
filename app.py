@@ -61,3 +61,29 @@ col2.metric("Rent + Invest – Final Net Worth", f"₹{renter_final:,.0f}")
 
 st.subheader("Net Worth Over Time")
 st.line_chart(df.set_index("Year"))
+
+st.subheader("Want help applying this to your situation?")
+
+st.write(
+    "This calculator shows the math. "
+    "If you want help interpreting the result or planning next steps, you can explore more here."
+)
+
+st.markdown(
+    """
+    <a href="https://shreemoney.in" target="_blank">
+        <button style="
+            background-color:#0f4c81;
+            color:white;
+            padding:10px 18px;
+            border:none;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;
+        ">
+            Visit ShreeMoney
+        </button>
+    </a>
+    """,
+    unsafe_allow_html=True
+)
