@@ -21,6 +21,8 @@ down_payment = st.sidebar.number_input(
 st.sidebar.subheader("Loan Interest Rate")
 loan_rate = st.sidebar.slider("Loan Interest (%)", 5.0, 12.0, 8.0, step=0.05) / 100
 
+loan_tenure = st.sidebar.slider("Loan Tenure (Years)", 5, 30, 20)
+
 st.sidebar.header("Rent")
 starting_rent = st.sidebar.number_input("Monthly Rent (₹)", 0, 5_00_000, 20_000)
 rent_growth = st.sidebar.slider("Rent Growth (%)", 3.0, 12.0, 10.0, step=0.5) / 100
