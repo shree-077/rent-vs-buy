@@ -23,17 +23,18 @@ loan_tenure = st.sidebar.slider("Loan Tenure (Years)", 5, 30, 20)
 
 st.sidebar.header("Rent")
 starting_rent = st.sidebar.number_input("Monthly Rent (₹)", 0, 5_00_000, 20_000)
-rent_growth = st.sidebar.slider("Rent Growth (%)", 3.0, 12.0, 10.0) / 100
+rent_growth = st.sidebar.slider("Rent Growth (%)", 3.0, 12.0, 10.0) / 100,
+              st.sidebar.number_input("Rent Growth (%)", 3.0, 12.0, 10.0) / 100
 
 st.sidebar.header("Returns")
-investment_return = st.sidebar.slider("Investment Return (%)", 6.0, 15.0, 11.0) / 100
-property_appreciation = st.sidebar.slider("Property Appreciation (%)", 2.0, 12.0, 6.0) / 100
+investment_return = st.sidebar.slider("Investment Return (%)", 6.0, 15.0, 11.0, step=0.05) / 100
+property_appreciation = st.sidebar.slider("Property Appreciation (%)", 2.0, 12.0, 6.0, step=0.05) / 100
 
 st.sidebar.header("Costs")
 maintenance_rate = st.sidebar.slider("Maintenance (% of value)", 0.5, 2.0, 1.0) / 100
 annual_property_tax = st.sidebar.number_input("Annual Property Tax (₹)", 0, 50_000, 10_000)
-stamp_duty_rate = st.sidebar.slider("Stamp Duty (%)", 5.0, 8.0, 7.0) / 100
-selling_cost_rate = st.sidebar.slider("Selling Cost (%)", 1.0, 4.0, 2.0) / 100
+stamp_duty_rate = st.sidebar.slider("Stamp Duty (%)", 5.0, 8.0, 7.0, step=0.05) / 100
+selling_cost_rate = st.sidebar.slider("Selling Cost (%)", 1.0, 4.0, 2.0, step=0.05) / 100
 
 analysis_years = st.sidebar.slider("Analysis Period (Years)", 5, 30, 20)
 
