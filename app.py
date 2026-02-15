@@ -24,7 +24,7 @@ loan_tenure = st.sidebar.slider("Loan Tenure (Years)", 5, 30, 20)
 st.sidebar.header("Rent")
 starting_rent = st.sidebar.number_input("Monthly Rent (₹)", 0, 5_00_000, 20_000)
 rent_growth = st.sidebar.slider("Rent Growth (%)", 3.0, 12.0, 10.0) / 100
-rent_growth = st.sidebar.number_input("Rent Growth (%)", 3.0, 12.0, 10.0) / 100              
+#rent_growth = st.sidebar.number_input("Rent Growth (%)", 3.0, 12.0, 10.0) / 100              
 
 st.sidebar.header("Returns")
 investment_return = st.sidebar.slider("Investment Return (%)", 6.0, 15.0, 11.0, step=0.05) / 100
