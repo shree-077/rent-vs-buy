@@ -8,7 +8,16 @@ st.title("Rent vs Buy – Decision Tool")
 
 st.sidebar.header("Property & Loan")
 property_price = st.sidebar.number_input("Property Price (₹)", 0, 50_00_00_000, 90_00_000)
-down_payment = st.sidebar.number_input("Down Payment (₹)", 0, property_price, 20_00_000)
+max_down_payment = int(property_price)
+default_down_payment = min(20_00_000, max_down_payment)
+
+down_payment = st.sidebar.number_input(
+    "Down Payment (₹)",
+    min_value=0,
+    max_value=max_down_payment,
+    value=default_down_payment,
+    step=50_000
+)
 loan_rate = st.sidebar.slider("Loan Interest (%)", 5.0, 12.0, 8.0) / 100
 loan_tenure = st.sidebar.slider("Loan Tenure (Years)", 5, 30, 20)
 
