@@ -19,7 +19,7 @@ down_payment = st.sidebar.number_input(
     step=50_000
 )
 st.sidebar.subheader("Loan Interest Rate")
-loan_rate = st.sidebar.slider("Loan Interest (%)", 5.0, 12.0, 8.0, step=0.05) / 100)
+loan_rate = st.sidebar.slider("Loan Interest (%)", 5.0, 12.0, 8.0, step=0.05) / 100
 
 st.sidebar.header("Rent")
 starting_rent = st.sidebar.number_input("Monthly Rent (₹)", 0, 5_00_000, 20_000)
