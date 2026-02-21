@@ -2,6 +2,30 @@ import streamlit as st
 from rvo import run_single_scenario
 from plots import plot_net_worth
 
+def format_inr(x):
+    x = int(round(x))
+    s = str(abs(x))
+    
+    if len(s) <= 3:
+        result = s
+    else:
+        last3 = s[-3:]
+        rest = s[:-3]
+        parts = []
+        
+        while len(rest) > 2:
+            parts.insert(0, rest[-2:])
+            rest = rest[:-2]
+        
+        if rest:
+            parts.insert(0, rest)
+        
+        result = ",".join(parts) + "," + last3
+
+    return ("-" if x < 0 else "") + result
+
+
+
 st.set_page_config(page_title="Rent vs Buy Calculator", layout="wide")
 
 st.title("Rent vs Buy – Decision Tool")
@@ -70,8 +94,8 @@ st.info("Opening this on your phone? Tap the ← arrows in the top-left to edit 
 st.subheader("Net Worth Comparison")
 col1, col2 = st.columns(2)
 
-col1.metric("Buy – Final Net Worth", f"₹{owner_final:,.0f}")
-col2.metric("Rent + Invest – Final Net Worth", f"₹{renter_final:,.0f}")
+col1.metric("Buy – Final Net Worth", f"₹{format_inr(owner_final)}")
+col2.metric("Rent + Invest – Final Net Worth", f"₹{format_inr(renter_final)}")
 
 st.subheader("Net Worth Over Time")
 st.line_chart(df.set_index("Year"))
